@@ -1,0 +1,84 @@
+/* Estilo general */
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .login-container {
+    padding: 30px;
+  }
+  
+  .login-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  /* Estilos para los campos de entrada */
+  .form-control {
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 10px rgba(106, 17, 203, 0.4);
+    outline: none;
+  }
+  
+  /* Estilos para los botones */
+  .custom-btn {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 18px;
+    transition: background 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Enlaces */
+  .text-primary {
+    color: #6a11cb;
+  }
+  
+  .text-primary:hover {
+    color: #2575fc;
+    text-decoration: underline;
+  }
+  
+  /* Mensajes de error */
+  .text-danger {
+    font-size: 14px;
+    color: #ff4d4d;
+  }
+  
+  /* Enlace al pie */
+  a {
+    font-size: 14px;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #2575fc;
+  }
+  

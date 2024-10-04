@@ -1,0 +1,58 @@
+<div class="container login-container">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card p-4 login-card shadow">
+        <h2 class="text-center mb-4">Bienvenido</h2>
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+          <div class="form-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Usuario"
+              required
+              [(ngModel)]="email"
+              name="email"
+              #emailInput="ngModel"
+            />
+            <div *ngIf="emailInput.invalid && emailInput.touched" class="text-danger">
+              El usuario es requerido.
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Contraseña"
+              required
+              [(ngModel)]="password"
+              name="password"
+              #passwordInput="ngModel"
+            />
+            <div *ngIf="passwordInput.invalid && passwordInput.touched" class="text-danger">
+              La contraseña es requerida.
+            </div>
+          </div>
+
+          <div *ngIf="errorMessage" class="text-danger text-center mt-3">
+            {{ errorMessage }}
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-block custom-btn" [disabled]="loginForm.invalid">
+              Ingresar
+            </button>
+          </div>
+
+          <div class="mt-3 text-center">
+            <a href="#" class="text-primary">¿Perdiste tu contraseña?</a><br />
+            <a href="#" class="text-primary">¿No tienes cuenta? Regístrate</a>
+          </div>
+        </form>
+      </div>
+      <div class="text-center mt-3">
+        <a href="#" class="text-primary">Volver</a>
+      </div>
+    </div>
+  </div>
+</div>
